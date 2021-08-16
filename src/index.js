@@ -1,12 +1,12 @@
 
 exports.min = function min (array) {
-  return 0;
+  return array ? [...array].sort((a, b) => a - b)[0] : 0;
 }
 
 exports.max = function max (array) {
-  return 0;
+  return array ? [...array].sort((a, b) => b - a)[0] : 0;
 }
 
 exports.avg = function avg (array) {
-  return 0;
+  return array ? Math.round([...array].reduce((sum, i) => sum + i) / array.length * 100) / 100 : 0;
 }
